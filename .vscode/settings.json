@@ -1,4 +1,4 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/1bfd4fd5-636b-487b-8e8b-9f9e0bdb9b42/resourceGroups/cloudjam2020_4ef48192-7909-40d0-95ee-72f8ed068482/providers/Microsoft.Web/sites/ClearOrbit2",
+    "appService.defaultWebAppToDeploy": "",
     "appService.deploySubpath": "."
 }
