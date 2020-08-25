@@ -22,7 +22,7 @@ const app = express();
 // .then(() => console.log('Connection to CosmosDB successful'))
 // .catch((err) => console.error(err));
 
-mongoose.connect('https://db-orbit2020.mongo.cosmos.azure.com:443', {
+mongoose.connect('mongodb://db-orbit2020:KkeTHyP06h5iagNvNm5FEgh5V3uSo5jyimrGyLV4KwU2KJtYWv0tdEAjXu4715Guu1mNYbH0hey3Vs3Da4X1bQ==@db-orbit2020.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@db-orbit2020@', {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
