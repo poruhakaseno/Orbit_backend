@@ -7,7 +7,7 @@ const trackingSchema = mongoose.Schema({
     //unloadingPoint: { type: String, required: true },
     //recipient: { type: String, required: true },
     po: { type: String, required: true },
-    vendor: { type: String, required: true },
+    vendor: { type: String, required: true }
     //createdBy: { type: String, required: true },
     //createdTimeStamp: { type: String, required: true },
 });

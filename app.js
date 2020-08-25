@@ -54,7 +54,7 @@ app.post('/api/trackings', (req, res, next) => {
         //unloadingPoint: req.body.unloadingPoint,
         //recipient: req.body.recipient,
         po: req.body.po,
-        vendor: req.body.vendor,
+        vendor: req.body.vendor
     });
     tracking.save().then(createdTracking => {
         res.status(201).json({

@@ -15,9 +15,9 @@ router.post(
             // unloadingPoint: req.body.unloadingPoint,
             // recipient: req.body.recipientk,
             po: req.body.po,
-            vendor: req.body.vendor,
-            //createdBy: "Gap",
-            //createdTimeStamp: "Today"
+            vendor: req.body.vendor
+                //createdBy: "Gap",
+                //createdTimeStamp: "Today"
         });
         tracking.save().then(createdTracking => {
             res.status(201).json({
@@ -25,7 +25,7 @@ router.post(
                 post: {
                     ...createdTracking,
                     // create mongo ID in database 
-                    id: createdTracking._id,
+                    id: createdTracking._id
 
                 }
             });
