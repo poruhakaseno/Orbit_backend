@@ -5,34 +5,32 @@ const Tracking = require("../models/tracking");
 const router = express.Router();
 
 router.post(
-  "",
-  (req, res, next) => {
-    console.log(req.body);
-    const tracking = new Tracking({
-      trackingNo: req.body.trackingNo,
-      // status: req.body.status,
-      // shipto: req.body.shipto,
-      // unloadingPoint: "HRH",
-      // recipient: "No one",
-      // po: req.body.po,
-      // vendor:  req.body.vendor,
-      // createdBy: "Gap",
-      // createdTimeStamp: "Today"
-    });
-    tracking.save().then(createdTracking => {
-      res.status(201).json({
-        message: "Tracking added successfully",
-        post: {
-          ...createdTracking,
-          id: createdTracking._id,
-          // unloadingPoint: "HRH",
-          // recipient: "No one",
-          // createdBy: "Gap",
-          // createdTimeStamp: "Today"
-        }
-      });
-    });
-  }
+    "",
+    (req, res, next) => {
+        console.log(req.body);
+        const tracking = new Tracking({
+            trackingNo: req.body.trackingNo,
+            status: req.body.status,
+            shipto: req.body.shipto,
+            // unloadingPoint: req.body.unloadingPoint,
+            // recipient: req.body.recipientk,
+            po: req.body.po,
+            vendor: req.body.vendor,
+            //createdBy: "Gap",
+            //createdTimeStamp: "Today"
+        });
+        tracking.save().then(createdTracking => {
+            res.status(201).json({
+                message: "Tracking added successfully",
+                post: {
+                    ...createdTracking,
+                    // create mongo ID in database 
+                    id: createdTracking._id,
+
+                }
+            });
+        });
+    }
 );
 
 module.exports = router;
@@ -84,5 +82,3 @@ module.exports = router;
 //     res.status(200).json({ message: "Post deleted!" });
 //   });
 // });
-
-

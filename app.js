@@ -47,7 +47,14 @@ app.use((req, res, next) => {
 
 app.post('/api/trackings', (req, res, next) => {
     const tracking = new Tracking({
-        trackingNo: req.body.trackingNo
+        // *** Data fields to post datatbase 
+        trackingNo: req.body.trackingNo,
+        status: req.body.status,
+        shipto: req.body.shipto,
+        //unloadingPoint: req.body.unloadingPoint,
+        //recipient: req.body.recipient,
+        po: req.body.po,
+        vendor: req.body.vendor,
     });
     tracking.save().then(createdTracking => {
         res.status(201).json({
