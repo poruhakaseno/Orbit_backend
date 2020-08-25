@@ -22,7 +22,7 @@ const app = express();
 // .then(() => console.log('Connection to CosmosDB successful'))
 // .catch((err) => console.error(err));
 
-mongoose.connect('mongodb://localhost:27017/cloudjam2020', {
+mongoose.connect('https://db-orbit2020.mongo.cosmos.azure.com:443', {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
